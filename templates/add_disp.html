@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style_admin.css" />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Admin</title>
+</head>
+<body>
+    <div class="contenedor-general flex">
+        <div class="cnt-dash">
+            <h1 class="dashtext">Agregar Dispositivo</h1>
+            
+            
+        </div>
+        {% if message  %}
+            <div class="alerta flex">
+                <p>{{ message }}</p>
+            </div>
+            {% endif %}
+        <div class="forma">
+            
+            
+            <form action="/add_disp" method="post">
+                <ul>
+                <li>
+                    <label for="serial">Serial</label>
+                    <input type="text" id="serial" name="serial">
+                </li>
+                <li>
+                    <label for="contrasena">Contraseña</label>
+                    <input type="text" id="contrasena" name="contrasena">
+                </li>
+                <li class="button">
+                    <button class="btn-descargar" type="submit">Agregar</button>
+                  </li>
+                </ul>
+                
+            </form>
+
+        </div>
+    </div>
+    <div class="navbar">
+        <img src="/static/img/hojita.svg" alt="hoja">
+        <a href="/"><img src="/static/img/dash.svg" alt="dashboard-icon"></a>
+        <a href="/perfil"><img src="/static/img/perfil.svg" alt="perfil-icon"></a>
+        {% if nivel == 1 %}
+        <img src="/static/img/conf.png" alt="perfil-icon">
+        {% endif%}
+        <a href="/logout"><img src="/static/img/logout.svg" alt="logout-icon"></a>
+    </div>
+    
+
+    <footer class="footer flex">
+        <p>© 2022 All Rights Reserved Designed by Freyen</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style_crear.css" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Crear Cuenta</title>
+  </head>
+  <body>
+    <div class="contenedor1 flex">
+      <div class="display1">Crear Cuenta</div>
+      <div class="contenedor-datos flex">
+        <section class="contenedor-crear">
+          <label class="txt-m-14pt" for="usuario">Nombre</label>
+          <label class="txt-m-14pt" for="usuario">Usuario<a id='resultado-usuario'></a></label>
+          <input
+            class="d-input"
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            minlength="10"
+            maxlength="50"
+          />
+          <input
+            class="d-input"
+            type="text"
+            id="usuario"
+            name="usuario"
+            required
+            minlength="4"
+            maxlength="30"
+          />
+
+          <label class="txt-m-14pt" for="usuario">Correo Electronico<a id='resultado-correo'></a></label>
+          <label class="txt-m-14pt" for="usuario"
+            >Confirmar Correo Electronico <a id='resultado-c-correo'></a></label
+          >
+          <input
+            class="d-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="@example.com"
+            required
+            minlength="4"
+            maxlength="50"
+            oncopy="return false"
+            onpaste="return false"
+            onkeyup="validarEmail(this)"
+            
+          />
+
+          
+          <input
+            class="d-input"
+            type="email"
+            id="c-email"
+            name="c-email"
+            required
+            minlength="4"
+            maxlength="50"
+            oncopy="return false"
+            onpaste="return false"
+          />
+
+          <label class="txt-m-14pt" for="usuario">Contraseña<a id='resultado-contrasena'></a></label>
+          <label class="txt-m-14pt" for="usuario">Confirmar Contraseña <a id='resultado-c-contrasena'></a></label>
+          <input
+            class="d-input"
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            placeholder="Minimo 6 Caracteres, no espacios"
+            required
+            minlength="6"
+            maxlength="30"
+            oncopy="return false"
+            onpaste="return false"
+            onkeyup="validarContra(this)"
+          />
+
+          <input
+            class="d-input"
+            type="password"
+            id="c-contrasena"
+            name="c-contrasena"
+            required
+            minlength="6"
+            maxlength="30"
+            oncopy="return false"
+            onpaste="return false"
+          />
+
+          <label class="txt-m-14pt" for="usuario"
+            >No. Serial de Dispositivo</label
+          >
+          <label class="txt-m-14pt" for="usuario"
+            >Confirmar No. Serial de Dispositivo <a id='resultado-serial'></a></label
+          >
+          <input
+            class="d-input"
+            type="text"
+            id="serial"
+            name="serial"
+            placeholder="xxxxxx"
+            required
+            minlength="4"
+            maxlength="12"
+            oncopy="return false"
+            onpaste="return false"
+          />
+
+          <input
+            class="d-input"
+            type="text"
+            id="c-serial"
+            name="c-serial"
+            required
+            minlength="4"
+            maxlength="12"
+            oncopy="return false"
+            onpaste="return false"
+          />
+        </section>
+        <section>
+            <label class="container txt-m-14pt">Acepto
+                <input class="checkbox"type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+          <a href="#">Terminos y Condiciones</a>
+        </section>
+        <button id="btn_crear" class="btn-iniciar">Crear Cuenta</button>
+        <label class="txt-m-14pt" for="">¿Ya tienes una cuenta?<a href="/">Inicia sesión</a></label>
+      </div>
+    </div>
+
+    <div class="footer flex">
+      <p>© 2022 All Rights Reserved Designed by Freyen</p>
+    </div>
+    <img class="hoja" src="/static/img/hoja_r.png" alt="hoja" />
+
+
+    <!-- Scripts-->
+    <script src="/static/js/registrar.js"></script>
+  </body>
+</html>

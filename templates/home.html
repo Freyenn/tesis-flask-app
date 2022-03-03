@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style_home.css" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Iniciar Sesión</title>
+  </head>
+  <body>
+    
+
+    <div class="contenedor1 flex">
+      <div class="display1">Iniciar Sesión</div>
+        
+      <div class="contenedor-datos flex">
+        
+        <div id ="alerta" class="alerta flex"></div>
+        
+        <label class="lb-usuario txt-m-14pt" for="usuario">Usuario</label>
+
+        <input
+          class="d-input"
+          type="text"
+          id="usuario"
+          name="usuario"
+          required
+          minlength="4"
+          maxlength="12"
+        />
+
+        <label class="lb-contra txt-m-14pt" for="contra">Constraseña</label>
+
+        <input
+          class="d-input"
+          type="password"
+          id="contra"
+          name="contra"
+          required
+          minlength="4"
+          maxlength="12"
+        />
+
+        <button id="btn_iniciar" class="btn-iniciar">Iniciar</button>
+        <a href="/crear_cuenta">Crear cuenta</a>
+      </div>
+    </div>
+
+    <div class="footer flex">
+      <p>© 2022 All Rights Reserved Designed by Freyen</p>
+    </div>
+    <img class="hoja" src="/static/img/hoja_r.png" alt="hoja" />
+
+
+    <!-- Scripts-->
+    <script src="/static/js/login.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style_perfil.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Perfil</title>
+</head>
+<body>
+    <div class="contenedor-general flex">
+        <div class="cnt-dash">
+            <h1 class="dashtext">Perfil</h1>
+            {% if message  %}
+            <div class="alerta flex">
+                <p>{{ message }}</p>
+            </div>
+            {% endif %}
+            
+        </div>
+        <div class="forma">
+            <p>Usuario</p>
+            <p>{{usuario}}</p>
+            <p>Contraseña</p>
+            <button class="btn-descargar">Cambiar Contraseña</button>
+            <p>Dispositivo</p>
+            <p>{{dispositivo}}</p>
+
+        </div>
+    </div>
+    <div class="navbar">
+        <img src="/static/img/hojita.svg" alt="hoja">
+        <a href="/"><img src="/static/img/dash.svg" alt="dashboard-icon"></a>
+        <img src="/static/img/perfil.svg" alt="perfil-icon">
+        {% if nivel == 1 %}
+        <a href="/admin"><img src="/static/img/conf.png" alt="perfil-icon"></a>
+        {% endif%}
+        <a href="/logout"><img src="/static/img/logout.svg" alt="logout-icon"></a>
+    </div>
+    
+
+    <footer class="footer flex">
+        <p>© 2022 All Rights Reserved Designed by Freyen</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Reset de estilos, asignacion de fuente para la pagina, colores usados */
+* {
+    
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+    font-family: 'Montserrat', sans-serif;
+    --clr-morado-800: hsl(246, 50%, 38%);
+    --clr-morado-700: hsl(246, 42%, 50%);
+    --clr-morado-600: hsl(247, 60%, 64%);
+    --clr-morado-400: hsl(250, 100%, 84%);
+    --clr-rosa_oscuro: hsl(330, 100%, 31%);
+    --clr-drop_shadow:1px 2px 20px 0px rgba(102,102,102,0.28);
+
+  }
+/* Clases de utilidad */
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+  }
+
+.txt-m-14pt{
+    font-weight: 500;
+    font-size: 14pt;
+}
+/* Fin */
+/* Contenedor General */
+.contenedor1{
+    width: 100vw;
+    height: 95vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Seccion Iniciar Sesión-Display 1 Design system */
+.display1{
+    font-weight: 800;
+    font-size: 60pt;
+}
+/* Recuadro contenedor de Usuario, contraseña, etc. */
+.contenedor-datos{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3em;
+    box-shadow: var(--clr-drop_shadow);
+    width: 547px;
+    height: 424px;
+}
+/* Etiquetas de entrada */
+.lb-usuario{
+    margin-bottom: -1em;
+    margin-left: -10.5em;
+}
+.lb-contra{
+    margin-bottom: -1em;
+    margin-left: -8em;
+    
+}
+/* Cuadros de entrada */
+.d-input{
+    width: 15.5em;
+    height: 2em;
+    border-radius:0.4em;
+    border: 1px solid grey;
+    font-size: 13pt;
+    font-weight: 500;
+}
+/* Boton de inicicar sesión */
+.btn-iniciar{
+    margin-top: 2em;
+    background-color: var(--clr-morado-600);  
+    border-radius:0.4em;
+    width: 11em;
+    height: 3em;
+    font-size: 12pt;
+    font-weight: 600;
+    color: white;
+}
+
+.btn-iniciar:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* link crear cuenta */
+.contenedor-datos a {
+    margin-top: 2rem;
+    font-size: 14pt;
+    font-weight: 500;
+    color: var(--clr-morado-700);
+}
+
+.contenedor-datos a:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Alerta de inicio */
+.alerta{
+    font-weight: 600;
+    font-size: 14pt;
+    color: red;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+/* footer */
+.footer{
+    width: 100vw;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 13pt;
+}
+
+.hoja{
+    position: absolute;
+    bottom:0px;
+    border:0px;
+    right: 0px;
+}
